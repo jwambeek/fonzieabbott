@@ -11,7 +11,7 @@
  Import Users From CSV/Excel Odoo
  Import User From CSV Module,  Import User From Excel,Import  User From XLS, Import  User From XLSX Odoo
  Import User From CSV Module,  Import  User From Excel App,Import  User XLS, Import  User From XLSX, User From Excel,  User From CSV,  User From XLS,  User From XLSX Odoo""",
-    "version": "14.0.1",
+    "version": "14.0.2",
     "depends": [
         "base",
         "sh_message"
