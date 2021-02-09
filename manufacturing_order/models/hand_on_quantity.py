@@ -1,11 +1,4 @@
 from odoo import api, fields, models, _
-from odoo.exceptions import AccessError, UserError
-from odoo.tools import float_compare, float_round, float_is_zero, format_datetime
-from odoo.tools.misc import format_date
-
-from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
-
-SIZE_BACK_ORDER_NUMERING = 3
 
 
 class Mrp_Production(models.Model):
