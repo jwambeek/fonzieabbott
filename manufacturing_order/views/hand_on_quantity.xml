@@ -9,6 +9,6 @@
              	<field name="inventory_quantity" string="On Hand Quantity" optional="show"/>
              </field>
         
-     
+      </field>
  </record>
 </odoo>
