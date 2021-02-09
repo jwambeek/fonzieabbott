@@ -6,10 +6,7 @@ class StockQuant(models.Model):
 
     inventory_quantity = fields.Float(string='Hand On quantity', compute='_compute_inventory_quantity')
 
-    quantity = fields.Float(
-        'Quantity',
-        help='Quantity of products in this quant, in the default unit of measure of the product',
-        readonly=True)
+    quantity = fields.Float('Quantity', help='Quantity of products in this quant, in the default unit of measure of the product', readonly=True)
     
 
 
