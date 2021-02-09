@@ -6,8 +6,8 @@
             <field name="model">mrp.production</field>
             <field name="arch" type="xml">
                
-             <field name="product_uom_id" position="after">
-             	<field name="inventory_quantity" string="On Hand Quantity" />
+             <field name="quantity_done" position="after">
+             	<field name="inventory_quantity" string="On Hand Quantity"  />
              </field>
         
      </field>
