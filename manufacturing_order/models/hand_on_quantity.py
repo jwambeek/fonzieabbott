@@ -5,7 +5,6 @@ from odoo.tools.misc import format_date
 
 from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 
-SIZE_BACK_ORDER_NUMERING = 3
 
 
 class MrpProduction(models.Model):
@@ -22,6 +21,9 @@ class MrpProduction(models.Model):
         readonly=True)
     
 
-  
-  
-           
+
+    @api.depends('quantity')
+    def _compute_inventory_quantity(self):
+        
+        for quant in self:
+            quant.inventory_quantity = quant.quantity
