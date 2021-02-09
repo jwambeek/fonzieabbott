@@ -22,7 +22,7 @@ class MrpProduction(models.Model):
         readonly=True)
     
 
-    
+  '''  
     @api.depends('quantity')
     def _compute_inventory_quantity(self):
         if not self._is_inventory_mode():
@@ -30,3 +30,5 @@ class MrpProduction(models.Model):
             return
         for quant in self:
             quant.inventory_quantity = quant.quantity
+            
+            '''
