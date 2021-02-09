@@ -4,7 +4,7 @@
 
 {
     'name': 'Manufacturing',
-    'version': '2.0',
+    'version': '2.1',
     
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
@@ -12,8 +12,8 @@
     'depends': ['product', 'stock', 'resource', 'mrp' ],
     'description': "",
     'data': [
-        'security/mrp_security.xml',
-        'security/ir.model.access.csv',
+        #'security/mrp_security.xml',
+        #'security/ir.model.access.csv',
         'views/hand_on_quantity.xml',
     ],
    
