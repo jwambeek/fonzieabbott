@@ -9,7 +9,7 @@
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
     'summary': 'Manufacturing Orders & BOMs',
-    'depends': ['product', 'stock', 'resource', 'production', 'mrp', 'mrp_production'],
+    'depends': ['product', 'stock', 'resource', 'mrp' ],
     'description': "",
     'data': [
         'security/mrp_security.xml',
