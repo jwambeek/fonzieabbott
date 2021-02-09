@@ -6,7 +6,7 @@
             <field name="model">mrp.production</field>
             <field name="arch" type="xml">
 		    
-		    <xpath expr="//page[@string='Components']/field[@name='quantity_done']" position="after">
+		    <xpath expr="//page[@string='Components']/tree/field[@name='quantity_done']" position="after">
                      <field name="inventory_quantity"/>
                      </xpath>
                
