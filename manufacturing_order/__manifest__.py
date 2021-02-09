@@ -12,7 +12,7 @@
     'depends': ['product', 'stock', 'resource', 'mrp' ],
     'description': "",
     'data': [
-        
+        'security/mrp_security.xml',
         'security/ir.model.access.csv',
         'views/hand_on_quantity.xml',
     ],
