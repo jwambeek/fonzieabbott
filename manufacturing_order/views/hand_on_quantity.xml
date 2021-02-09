@@ -5,11 +5,13 @@
            
             <field name="model">mrp.production</field>
             <field name="arch" type="xml">
-		 <xpath
+		    <field name="inventory_quantity"/>
+		    
+	<!--	 <xpath
                    expr="//field[@name='move_raw_ids']/tree/field[@name='quantity_done']"
                    position="after">
                    <field name="inventory_quantity"/>
-                 </xpath>
+                 </xpath> -->
            
         
      </field>
