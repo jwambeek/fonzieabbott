@@ -12,9 +12,9 @@ from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 
 
 
-class MrpProduction(models.Model):
+class StockQuant(models.Model):
     
-    _inherit = 'mrp.production'
+    _inherit = 'stock.quant'
 
     inventory_quantity = fields.Float(
         'Inventoried Quantity', compute='_compute_inventory_quantity',
@@ -29,5 +29,8 @@ class MrpProduction(models.Model):
 
     @api.depends('quantity')
     def _compute_inventory_quantity(self):
+        if not self._is_inventory_mode():
+            self.inventory_quantity = 0
+            return
         for quant in self:
             quant.inventory_quantity = quant.quantity
