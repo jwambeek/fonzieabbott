@@ -1,20 +1,8 @@
-import logging
-
-from psycopg2 import Error, OperationalError
-
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
-
-
-
-
-
+from odoo import api, fields, models
 
 class StockQuant(models.Model):
     
-    _inherit = 'stock.quant'
+    _inherit = 'stock.move'
 
     inventory_quantity = fields.Float(string='Hand On quantity', compute='_compute_inventory_quantity')
 
