@@ -5,9 +5,9 @@
            
             <field name="model">mrp.production</field>
             <field name="arch" type="xml">
-           <xpath expr="//page[@name='components']/field[@name='move_raw_ids']/tree/field[@name='product_uom_id']" position="after">
-<field name="inventory_quantity"/>
-</xpath>
+           <xpath expr="//page[@name='components']/field[@name='move_raw_ids']/tree/field[@name='quantity_done']" position="after">
+           <field name="inventory_quantity" />
+         </xpath>
         
      </field>
  </record>
