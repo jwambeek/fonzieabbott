@@ -8,7 +8,7 @@ from odoo.osv import expression
 from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 
 
-from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
+
 
 
 
@@ -16,9 +16,7 @@ class StockQuant(models.Model):
     
     _inherit = 'stock.quant'
 
-    inventory_quantity = fields.Float(
-        'Inventoried Quantity', compute='_compute_inventory_quantity',
-        inverse='_set_inventory_quantity', groups='stock.group_stock_manager')
+    inventory_quantity = fields.Float(string='Hand On quantity', compute='_compute_inventory_quantity')
 
     quantity = fields.Float(
         'Quantity',
