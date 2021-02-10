@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <record model="ir.ui.view" id="view_product_view_pivot">
+        <record id="product_view_pivot" model="ir.ui.view">
             <field name="name">Product.template.product.pivot</field>
             <field name="model">product.template</field>
             <field name="arch" type="xml">
@@ -16,16 +16,16 @@
             <field name="view_mode">pivot</field>
             <field name="view_id" ref="product.view_product_view_pivot"/>
             <field name="act_window_id" ref="action_orders"/>
-        </record>
+        </record>-->
 
-    <record id="product_template_action" model="ir.actions.act_window">
-        <field name="name">Products</field>
+    <record id="product_template_action_new" model="ir.actions.act_window">
+        <field name="name">Product List</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.template</field>
-        <field name="view_mode">kanban,tree,pivot,form</field>
-        <field name="view_id" ref="product_template_kanban_view"/>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="product_view_pivot"/>
         <field name="search_view_id" ref="product.product_template_search_view"/>
-        <field name="context">{"search_default_filter_to_sell":1}</field>
+        <!--<field name="context">{"search_default_filter_to_sell":1}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a new product
@@ -33,8 +33,8 @@
                 You must define a product for everything you sell or purchase,
                 whether it's a storable product, a consumable or a service.
             </p>
-        </field>
-    </record>-->
+        </field>-->
+    </record>
 
 
 
