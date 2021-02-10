@@ -4,7 +4,7 @@ from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 
 
 
-class StockQuant(models.Model):
+class Transfers(models.Model):
     _inherit = 'stock.picking'
 
     def action_assign(self):
@@ -13,7 +13,7 @@ class StockQuant(models.Model):
         also impact the state of the picking as it is computed based on move's states.
         @return: True
         """
-        self.filtered(lambda picking: picking.state == 'draft').action_confirm()
+        #self.filtered(lambda picking: picking.state == 'draft').action_confirm()
         """
         moves = self.mapped('move_lines').filtered(lambda move: move.state not in ('draft', 'cancel', 'done'))
         if not moves:
