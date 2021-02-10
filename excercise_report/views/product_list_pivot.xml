@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
         <record model="ir.ui.view" id="view_sale_order_pivot_new">
-            <field name="name">sale.order.pivot</field>
-            <field name="model">sale.order</field>
+            <field name="name">product.template.pivot</field>
+            <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <pivot string="Product List" sample="2">
                     <field name="date_order" type="row"/>
