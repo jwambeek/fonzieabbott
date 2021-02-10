@@ -17,7 +17,7 @@ class StockQuant(models.Model):
         for quant in self:
             quant.inventory_quantity = quant.quantity
 
-    @api.multi
+    
     def _get_inventory_move_values(self):
         print("t")
     
