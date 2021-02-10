@@ -2,6 +2,35 @@ from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 
+
+
+class StockQuant(models.Model):
+    _inherit = 'stock.picking'
+
+    def action_assign(self):
+        """ Check availability of picking moves.
+        This has the effect of changing the state and reserve quants on available moves, and may
+        also impact the state of the picking as it is computed based on move's states.
+        @return: True
+        """
+        self.filtered(lambda picking: picking.state == 'draft').action_confirm()
+        """
+        moves = self.mapped('move_lines').filtered(lambda move: move.state not in ('draft', 'cancel', 'done'))
+        if not moves:
+            raise UserError(_('Nothing to check the availability for.'))
+        # If a package level is done when confirmed its location can be different than where it will be reserved.
+        # So we remove the move lines created when confirmed to set quantity done to the new reserved ones.
+        package_level_done = self.mapped('package_level_ids').filtered(lambda pl: pl.is_done and pl.state == 'confirmed')
+        package_level_done.write({'is_done': False})
+        moves._action_assign()
+        package_level_done.write({'is_done': True})
+
+        return True
+        """
+
+
+
+"""
 class StockQuant(models.Model):
     
     _inherit = 'stock.move'
@@ -36,3 +65,5 @@ class StockQuant(models.Model):
                 move_vals = quant._get_inventory_move_values(-diff, quant.location_id, quant.product_id.with_company(quant.company_id).property_stock_inventory, out=True)
             move = quant.env['stock.move'].with_context(inventory_mode=False).create(move_vals)
             move._action_done()
+"""
+
