@@ -18,7 +18,7 @@ class StockQuant(models.Model):
             quant.inventory_quantity = quant.quantity
 
     
-    def _get_inventory_move_values(self):
+    def _get_inventory_move_values():
         print("t")
     
     def _set_inventory_quantity(self):
