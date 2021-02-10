@@ -5,8 +5,8 @@
             <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <pivot string="Product List" sample="2">
-                    <field name="date_order" type="row"/>
-                    <field name="amount_total" type="measure"/>
+                    <field name="name" type="row"/>
+                    <field name="standard_price" type="measure"/>
                 </pivot>
             </field>
         </record>
