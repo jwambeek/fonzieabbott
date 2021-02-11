@@ -30,7 +30,7 @@ class Sale_Report(models.Model):
             s.partner_id as partner_id,
             s.user_id as user_id,
             s.company_id as company_id,
-            s.product_brand_id as product_brand_id,
+            s.product_brand_id,
             s.campaign_id as campaign_id,
             s.medium_id as medium_id,
             s.source_id as source_id,
