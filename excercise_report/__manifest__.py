@@ -4,12 +4,12 @@
 
 {
     'name': 'Manufacturing',
-    'version': '2.6',
+    'version': '2.7',
     
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
     'summary': 'Manufacturing Orders & BOMs',
-    'depends': ['product', 'stock', 'resource', 'mrp','sale' ],
+    'depends': ['product','sale' ],
     'description': "",
     'data': [
         #'security/mrp_security.xml',
