@@ -6,7 +6,7 @@ from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 class Sale_Report(models.Model):
     _inherit = 'sale.report'
 
-    product_brand_id  = fields.Float('product.template','Brand', readonly=True)
+    product_brand_id  = fields.Float('product.template',string='Brand', readonly=True)
 
 """
 class Transfers(models.Model):
