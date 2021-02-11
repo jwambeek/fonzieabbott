@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+ <record id="product_add_action_new" model="ir.actions.act_window">
+        <field name="name">Product List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.report</field>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="view_order_product_pivot"/>
+    </record>
+</odoo>
