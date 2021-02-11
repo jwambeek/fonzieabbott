@@ -30,7 +30,6 @@ class Sale_Report(models.Model):
             s.partner_id as partner_id,
             s.user_id as user_id,
             s.company_id as company_id,
-            t.product_brand_id as product_brand_id,
             s.campaign_id as campaign_id,
             s.medium_id as medium_id,
             s.source_id as source_id,
@@ -76,7 +75,6 @@ class Sale_Report(models.Model):
             s.user_id,
             s.state,
             s.company_id,
-            t.product_brand_id,
             s.campaign_id,
             s.medium_id,
             s.source_id,
@@ -92,32 +90,5 @@ class Sale_Report(models.Model):
         """ % (groupby)
 
         return '%s (SELECT %s FROM %s GROUP BY %s)' % (with_, select_, from_, groupby_)
-
-
-"""
-class Transfers(models.Model):
-    _inherit = 'stock.picking'
-
-    def action_assign(self):
-        #Check availability of picking moves.
-        #This has the effect of changing the state and reserve quants on available moves, and may
-        #also impact the state of the picking as it is computed based on move's states.
-        #@return: True
-        
-        self.filtered(lambda picking: picking.state == 'draft').action_confirm()
-        
-        moves = self.mapped('move_lines').filtered(lambda move: move.state not in ('draft', 'cancel', 'done'))
-        if not moves:
-            raise UserError(_('Nothing to check the availability for.'))
-        # If a package level is done when confirmed its location can be different than where it will be reserved.
-        # So we remove the move lines created when confirmed to set quantity done to the new reserved ones.
-        package_level_done = self.mapped('package_level_ids').filtered(lambda pl: pl.is_done and pl.state == 'confirmed')
-        package_level_done.write({'is_done': False})
-        moves._action_assign()
-        package_level_done.write({'is_done': True})
-
-        return True
-        
-"""
 
 
