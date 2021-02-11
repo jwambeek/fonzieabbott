@@ -6,7 +6,7 @@
             <field name="arch" type="xml">
                 <pivot string="Product List" sample="2">
                     <field name="name" type="row"/>
-                    <field name="x_studio_alcohol_1" type="measure"/>
+                    <field name="standard_price" type="measure"/>
                 </pivot>
             </field>
         </record>
