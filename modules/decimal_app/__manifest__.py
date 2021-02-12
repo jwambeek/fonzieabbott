@@ -7,8 +7,13 @@
     'depends': [
         'account_accountant',
         'account',
-        'account_consolidation'
+        'account_consolidation',
+        'stock',
+        'mrp',
     ],    
+    'data': [
+        'views/mrp_view.xml',
+    ],
     'installable': True,
     'application':True,
     'auto_install':False
