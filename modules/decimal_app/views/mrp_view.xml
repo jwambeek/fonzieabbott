@@ -5,7 +5,8 @@
         <field name="model">purchase.order</field>
         <field name="arch" type="xml">
             <tree>
-               <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='components']/field[@name='move_raw_ids']/tree[1]/field[@name='product_uom']" position="before">
+               <!-- <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='components']/field[@name='move_raw_ids']/tree[1]/field[@name='product_uom']" position="before"> -->
+               <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom']" position="after">
                     <field name="qty_on_hand_in_location"/>
               </xpath>
             </tree>
