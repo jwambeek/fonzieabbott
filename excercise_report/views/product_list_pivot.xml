@@ -12,7 +12,7 @@
 
     </record>-->
 
-    <record id= "sales_analysis_list" model= "ir.ui.view">
+    <record model= "ir.ui.view" id= "sales_analysis_list" >
 
 
         <field name="model">sale.report</field >
