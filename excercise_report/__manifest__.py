@@ -4,7 +4,7 @@
 
 {
     'name': 'Manufacturing',
-    'version': '3.2',
+    'version': '3.3',
     
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
