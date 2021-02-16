@@ -15,7 +15,7 @@
         #'security/mrp_security.xml',
         #'security/ir.model.access.csv',
         #'views/hand_on_quantity.xml',
-        'views/product_list_pivot.xml',
+        #'views/product_list_pivot.xml',
     ],
    
     
