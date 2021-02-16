@@ -43,6 +43,7 @@ class Sale_Report(models.Model):
             s.source_id as source_id,
             extract(epoch from avg(date_trunc('day',s.date_order)-date_trunc('day',s.create_date)))/(24*60*60)::decimal(16,2) as delay,
             t.categ_id as categ_id,
+            t.product_brand_id as product_brand_id,
             s.pricelist_id as pricelist_id,
             s.analytic_account_id as analytic_account_id,
             s.team_id as team_id,
