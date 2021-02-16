@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<record id= "product_list" model= "ir.ui.view">
+<!--<record id= "product_list" model= "ir.ui.view">
         <field name="inherit_id" ref="product.product_template_only_form_view  "/>
         <field name="model">product.template</field >
         <field name="arch" type= "xml">
-                <!--<field name="categ_id" position="before">
-                    <field name="liters per unit"/>
-                </field>-->
-  
         <xpath expr="/page[@name='general_information']/field[@name='type']" position="after">
     <field name="liters_per_unit" string="Liters per unit"/>
-    <!--<field name="x_studio_category_of_alcohol" string="Category of alcohol"/>
-    <field name="x_studio_alcohol_1" string="Alcohol%"/>
-    <field name="x_studio_liters_per_unit" string="Liters per unit "/>
-    <field name="x_studio_total_liters_sold" string="Total liters sold"/>
-    <field name="x_studio_total_liters_of_alcohol_1" string="Total liters of alcohol"/>-->
   </xpath>
         </field>
 
+    </record>-->
+
+    <record id= "sales_analysis_list" model= "ir.ui.view">
+        <field name="name">sale.analysis.pivot</field>
+
+        <field name="model">sale.report</field >
+        <field name="inherit_id" ref="sale.view_order_product_pivot  "/>
+        <field name="arch" type= "xml">
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="product_brand_id" type="measure" />
+                </pivot>
+            </field>
+        </field>
+
     </record>
+
+
+
 
 
     
