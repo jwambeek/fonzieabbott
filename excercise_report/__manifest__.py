@@ -4,7 +4,7 @@
 
 {
     'name': 'Manufacturing',
-    'version': '3.5',
+    'version': '3.6',
     
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
@@ -15,7 +15,7 @@
         #'security/mrp_security.xml',
         #'security/ir.model.access.csv',
         #'views/hand_on_quantity.xml',
-        'views/product_list_pivot.xml',
+        #'views/product_list_pivot.xml',
     ],
    
     
