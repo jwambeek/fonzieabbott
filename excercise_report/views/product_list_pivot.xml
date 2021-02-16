@@ -16,7 +16,7 @@
 
 
         <field name="model">sale.report</field >
-        <field name="inherit_id" ref="sale.view_order_product_pivot  "/>
+        <field name="inherit_id" ref="sale.view_order_product_pivot"/>
         <field name="arch" type= "xml">
             <field name="arch" type="xml">
                 <pivot>
