@@ -75,7 +75,6 @@ class Sale_Report(models.Model):
         groupby_ = """
             l.product_id,
             l.order_id,
-            l.product_brand_id,
             t.uom_id,
             t.categ_id,
             t.product_brand_id,
