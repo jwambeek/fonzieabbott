@@ -3,7 +3,7 @@ from odoo.exceptions import UserError, ValidationError
 
 
 class Product_List(models.Model):
-    _inherit = 'sale.report'
+    _inherit = 'sale.template'
     
     liters_per_unit  = fields.Float(string='Liters per unit')
 
