@@ -10,7 +10,7 @@
                 </field>-->
   
         <xpath expr="/page[@name='general_information']/field[@name='type']" position="after">
-    <field name="Liters per unit" string="liters per unit"/>
+    <field name="liters_per_unit" string="Liters per unit"/>
     <!--<field name="x_studio_category_of_alcohol" string="Category of alcohol"/>
     <field name="x_studio_alcohol_1" string="Alcohol%"/>
     <field name="x_studio_liters_per_unit" string="Liters per unit "/>

@@ -14,7 +14,7 @@ class Sale_Report(models.Model):
     _inherit = 'sale.report'
 
     product_brand_id  = fields.Many2one('common.product.brand.ept',string='Brand', readonly=True)
-    liters_per_unit  = fields.Float('product.template','Liters per unit',readonly=True)
+    #liters_per_unit  = fields.Float('product.template','Liters per unit',readonly=True)
 
 
     
