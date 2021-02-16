@@ -47,7 +47,7 @@ class Sale_Report(models.Model):
             s.analytic_account_id as analytic_account_id,
             s.team_id as team_id,
             p.product_tmpl_id,
-            p.product_brand_id,
+            l.product_brand_id,
             partner.country_id as country_id,
             partner.industry_id as industry_id,
             partner.commercial_partner_id as commercial_partner_id,
