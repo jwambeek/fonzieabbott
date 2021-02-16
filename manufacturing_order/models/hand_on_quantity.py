@@ -11,13 +11,6 @@ class Mrp_Production(models.Model):
         help='Quantity of products in this quant, in the default unit of measure of the product',
         readonly=True)
 
-
-class Sale_Report(models.Model):
-    _inherit = 'sale.report'
-
-    product_brand_id  = fields.Many2one('common.product.brand.ept','Brand', readonly=True)
-    #liters_per_unit  = fields.Float('product.template','Liters per unit',readonly=True)
-
     
 
     """
