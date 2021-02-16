@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id= "product_list" model= "ir.ui.view">
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="model">product.template</field >
+        <field name="arch" type= "xml">
+                <field name="type" position="after">
+                    <field name="liters per unit"/>
+                </field>
+        </field>
+    </record>
+
+
+    
+
+</odoo>
