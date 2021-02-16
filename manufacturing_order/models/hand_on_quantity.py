@@ -15,7 +15,7 @@ class Mrp_Production(models.Model):
 class Sale_Report(models.Model):
     _inherit = 'sale.report'
 
-    product_brand_id  = fields.Many2one('common.product.brand.ept',string='Brand', readonly=True)
+    product_brand_id  = fields.Many2one('common.product.brand.ept','Brand', readonly=True)
     #liters_per_unit  = fields.Float('product.template','Liters per unit',readonly=True)
 
     
