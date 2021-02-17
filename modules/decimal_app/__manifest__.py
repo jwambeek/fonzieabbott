@@ -10,6 +10,8 @@
         'account_consolidation',
         'stock',
         'mrp',
+        'sale_management',
+        'product',
     ],    
     'data': [
         'views/mrp_view.xml',
