@@ -9,16 +9,24 @@
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
     'summary': 'Manufacturing Orders & BOMs',
-    'depends': ['product', 'stock', 'resource', 'mrp' ],
+    'depends': [
+        'account_accountant',
+        'account',
+        'account_consolidation',
+        'stock',
+        'mrp',
+        'sale_management',
+        'product',
+    ],
     'description': "",
-    'data': [
+   # 'data': [
         #'security/mrp_security.xml',
         #'security/ir.model.access.csv',
         #'views/hand_on_quantity.xml',
-    ],
+ #   ],
    
     
     'application': True,
     'installable': True,
-    'auto_install':False
+    'auto_install':True
 }
