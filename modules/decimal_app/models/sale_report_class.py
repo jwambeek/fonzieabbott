@@ -5,8 +5,7 @@ class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
     liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
-    number_of_units_sold = fields.Float(string ='Number of Units Sold', readonly=True)
-    
+    total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
 
 
     def _query(self, with_clause='', fields={}, groupby='', from_clause=''):
@@ -48,8 +47,7 @@ class Sale_Report_Class(models.Model):
             l.discount as discount,
             CASE WHEN l.product_id IS NOT NULL THEN sum((l.price_unit * l.product_uom_qty * l.discount / 100.0 / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END))ELSE 0 END as discount_amount,
             t.x_studio_liters_per_unit_eg_03_for_300ml as liters_sold,
-            t.x_studio_number_of_units_sold as number_of_units_sold,
-            
+            (count(*) * t.x_studio_liters_per_unit_eg_03_for_300ml) as total_liters_sold,
             s.id as order_id
         """
 
@@ -73,8 +71,8 @@ class Sale_Report_Class(models.Model):
             l.order_id,
             t.uom_id,
             t.categ_id,
+            t.x_studio_category_of_alcohol,
             t.x_studio_liters_per_unit_eg_03_for_300ml,
-            t.x_studio_number_of_units_sold,
             s.name,
             s.date_order,
             s.partner_id,
