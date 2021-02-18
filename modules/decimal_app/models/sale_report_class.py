@@ -5,7 +5,6 @@ class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
     liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
-    number_of_units_sold = fields.Integer(string ='Number of Units Sold', readonly=True)
     total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
 
 
@@ -36,7 +35,6 @@ class Sale_Report_Class(models.Model):
             s.source_id as source_id,
             extract(epoch from avg(date_trunc('day',s.date_order)-date_trunc('day',s.create_date)))/(24*60*60)::decimal(16,2) as delay,
             t.categ_id as categ_id,
-            t.x_studio_liters_per_unit_eg_03_for_300ml as liters_sold,
             s.pricelist_id as pricelist_id,
             s.analytic_account_id as analytic_account_id,
             s.team_id as team_id,
@@ -48,8 +46,8 @@ class Sale_Report_Class(models.Model):
             CASE WHEN l.product_id IS NOT NULL THEN sum(p.volume * l.product_uom_qty / u.factor * u2.factor) ELSE 0 END as volume,
             l.discount as discount,
             CASE WHEN l.product_id IS NOT NULL THEN sum((l.price_unit * l.product_uom_qty * l.discount / 100.0 / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END))ELSE 0 END as discount_amount,
-            
-            t.x_studio_number_of_units_sold as number_of_units_sold,
+            t.x_studio_liters_per_unit_eg_03_for_300ml as liters_sold,
+            (count(*) * t.x_studio_liters_per_unit_eg_03_for_300ml) as total_liters_sold,
             s.id as order_id
         """
 
@@ -73,9 +71,8 @@ class Sale_Report_Class(models.Model):
             l.order_id,
             t.uom_id,
             t.categ_id,
-            t.x_studio_liters_per_unit_eg_03_for_300ml,
-            t.x_studio_number_of_units_sold,
             t.x_studio_category_of_alcohol,
+            t.x_studio_liters_per_unit_eg_03_for_300ml,
             s.name,
             s.date_order,
             s.partner_id,
