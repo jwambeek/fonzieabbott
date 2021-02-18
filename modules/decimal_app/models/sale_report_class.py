@@ -5,7 +5,7 @@ class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
     liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
-    total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
+    
 
 
     def _query(self, with_clause='', fields={}, groupby='', from_clause=''):
