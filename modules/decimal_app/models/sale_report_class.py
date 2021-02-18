@@ -72,7 +72,7 @@ class Sale_Report_Class(models.Model):
             t.uom_id,
             t.categ_id,
             t.x_studio_category_of_alcohol,
-            t.x_studio_liters_per_unit_eg_03_for_300ml,
+            
             s.name,
             s.date_order,
             s.partner_id,
