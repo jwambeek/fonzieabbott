@@ -38,7 +38,7 @@ class Sale_Report_Class(models.Model):
             t.categ_id as categ_id,
             t.x_studio_liters_per_unit_eg_03_for_300ml as liters_sold,
             t.x_studio_number_of_units_sold as number_of_units_sold,
-            t.x_studio_liters_per_unit_eg_03_for_300ml * t.x_studio_number_of_units_sold as total_liters_sold,
+            
             s.pricelist_id as pricelist_id,
             s.analytic_account_id as analytic_account_id,
             s.team_id as team_id,
