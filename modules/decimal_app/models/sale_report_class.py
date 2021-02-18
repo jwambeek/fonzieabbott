@@ -4,7 +4,7 @@ from odoo import tools
 class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
-    liters_sold = fields.Integar(string ='Liters per Unit', readonly=True)
+    liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
     total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
 
 
