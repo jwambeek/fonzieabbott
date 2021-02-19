@@ -1,6 +1,6 @@
 {
     'name' : 'Decimal',
-    'version': '3.15',
+    'version': '3.16',
     'Summary': 'Change decimal places',
     'description': 'To print the new report',
     'license': 'LGPL-3',
