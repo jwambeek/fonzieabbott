@@ -5,9 +5,9 @@
         <field name="model">sale.report</field>
         <field name="arch" type="xml">
               <xpath expr="//search" position="inside">
-                    <!--    <filter name="shopify_instances" string="Shopify Instances" domain="[('shopify_instance_id','!=',False)]"/> -->
-                        <field name="liters_sold" />
-                      <!--  <filter string="Shopify Instance" name="groupby_shopify_instance_id" context="{'group_by':'shopify_instance_id'}"/> -->
+                      <filter name="lit_sold" string="Liters per Unit" domain="[('liters_sold','!=',False)]"/> 
+                        <field name="liters_sold" invisible="1" />
+                        <filter string="Liters per Unit" name="groupby_liters_sold" context="{'group_by':'liters_sold'}"/> 
                     </xpath>
         </field>
     </record>
