@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_tree" model="ir.ui.view">
+        <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot" />
+        <field name="model">sale.report</field>
+        <field name="arch" type="xml">
+              <xpath expr="//search" position="inside">
+                    <!--    <filter name="shopify_instances" string="Shopify Instances" domain="[('shopify_instance_id','!=',False)]"/> -->
+                        <field name="liters_sold" />
+                      <!--  <filter string="Shopify Instance" name="groupby_shopify_instance_id" context="{'group_by':'shopify_instance_id'}"/> -->
+                    </xpath>
+        </field>
+    </record>
+</odoo>
