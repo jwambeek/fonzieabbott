@@ -46,7 +46,7 @@ class Sale_Report_Class(models.Model):
             CASE WHEN l.product_id IS NOT NULL THEN sum(p.volume * l.product_uom_qty / u.factor * u2.factor) ELSE 0 END as volume,
             l.discount as discount,
             CASE WHEN l.product_id IS NOT NULL THEN sum((l.price_unit * l.product_uom_qty * l.discount / 100.0 / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END))ELSE 0 END as discount_amount,
-            (t.x_studio_liters_per_unit_eg_03_for_300ml / l.order_id) as liters_sold,
+            (t.x_studio_liters_per_unit_eg_03_for_300ml /  count(l.order_id) ) as liters_sold,
             (count(*) * t.x_studio_liters_per_unit_eg_03_for_300ml) as total_liters_sold,
             s.id as order_id
         """
