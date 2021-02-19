@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="sale_tree" model="ir.ui.view">
-        <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot" />
-        <field name="model">sale.report</field>
-        <field name="arch" type="xml">
-              <xpath expr="//search" position="inside">
-                      <filter name="lit_sold" string="Liters per Unit" domain="[('liters_sold','!=',False)]"/> 
-                        <field name="liters_sold" invisible="1" />
-                        <filter string="Liters per Unit" name="groupby_liters_sold" context="{'group_by':'liters_sold'}"/> 
-                    </xpath>
-        </field>
+    <record id="report_all_channels_sales_action" model="ir.actions.act_window">
+        <field name="name">Sales Analysis</field>
+        <field name="res_model">sale.report</field>
+        <field name="view_mode">pivot</field>
     </record>
 </odoo>
+
