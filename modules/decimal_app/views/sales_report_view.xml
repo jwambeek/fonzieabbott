@@ -5,7 +5,7 @@
         <field name="res_model">sale.report</field>
         <field name="view_mode">pivot</field>
          <pivot>
-                    <field name="alcohol_text"  />
+                    <field name="alcohol_text"  type="row" />
                 </pivot>
     </record>
 </odoo>
