@@ -9,9 +9,8 @@
 
     ],
     'demo': [
-        'data/product_product_demo.xml',
-        'data/sale_demo.xml',
     ],
     'installable': True,
-    'auto_install': False
+    'auto_install': False,
+    'application': True
 }
