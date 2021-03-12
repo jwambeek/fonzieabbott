@@ -13,10 +13,10 @@
         'sale_management',
         'product',
     ],    
-     'data': [
+     #'data': [
         #'views/mrp_view.xml',
-        'views/sales_report_view.xml'
-     ],
+        #'views/sales_report_view.xml'
+    # ],
     'installable': True,
     'application':True,
     'auto_install':True
