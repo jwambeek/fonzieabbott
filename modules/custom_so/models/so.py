@@ -8,7 +8,7 @@ class CustomField(models.Model):
 class SaleReport(models.Model):
     _inherit= 'sale.report'
 
-    payment_method = fields.Char(string= 'Payment Method')
+    payment_method = fields.Char(string= 'Payment Method', readonly=True)
 
     def _query(self, with_clause='', fields={}, groupby='', from_clause=''):
         with_ = ("WITH %s" % with_clause) if with_clause else ""
@@ -27,7 +27,7 @@ class SaleReport(models.Model):
             CASE WHEN l.product_id IS NOT NULL THEN sum(l.untaxed_amount_invoiced / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END) ELSE 0 END as untaxed_amount_invoiced,
             count(*) as nbr,
             s.name as name,
-            s.payment_method as custom_payment_method
+            s.custom_payment_method as payment_method
             s.date_order as date,
             s.state as state,
             s.partner_id as partner_id,
