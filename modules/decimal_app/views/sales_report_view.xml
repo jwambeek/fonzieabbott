@@ -13,12 +13,18 @@
         <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
         <field name="model">sale.report</field >
         <field name="arch" type= "xml">
-            <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="after">
+            <!--<xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="after">
                 <field name="alcohol_per" type="row"/>
-                <!--<field name="liters_per_unit" type="row"/>
+                <field name="liters_per_unit" type="row"/>
                 <field name="no_of_units_sold" type="row"/>
                 <field name="total_liters_sold" type="row"/>
-                <field name="total_liters_alcohol" type="row"/>-->
+                <field name="total_liters_alcohol" type="row"/>
+            </xpath>-->
+
+            <xpath expr="//field[@ name='categ_id']" position="after">
+
+                    <field name="alcohol_per" type="row" />
+
             </xpath>
         </field>
     </record>
