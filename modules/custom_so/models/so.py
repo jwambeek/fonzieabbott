@@ -73,7 +73,7 @@ class SaleReport(models.Model):
             t.uom_id,
             t.categ_id,
             s.name,
-            s.payment_method
+            l.payment_method
             s.date_order,
             s.partner_id,
             s.user_id,
