@@ -14,17 +14,17 @@
         <field name="model">sale.report</field >
         <field name="arch" type= "xml">
             <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="before">
-                <!--<field name="alcohol_per" type="col"/>
-                <field name="liters_per_unit" type="row"/>
+                <field name="alcohol_per" type="col"/>
+                <!--<field name="liters_per_unit" type="row"/>
                 <field name="no_of_units_sold" type="row"/>
                 <field name="total_liters_sold" type="row"/>
                 <field name="total_liters_alcohol" type="row"/>-->
             </xpath>
-        <pivot>
+        <!--<pivot>
             <xpath expr="//field[@ name='categ_id']" position="after">
                 <field name="liters_per_unit" type="row" />
             </xpath>
-        </pivot>
+        </pivot>-->
         </field>
     </record>
 </odoo>
