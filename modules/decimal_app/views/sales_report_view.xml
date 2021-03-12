@@ -20,12 +20,11 @@
                 <field name="total_liters_sold" type="row"/>
                 <field name="total_liters_alcohol" type="row"/>
             </xpath>-->
-
+        <pivot>
             <xpath expr="//field[@ name='categ_id']" position="after">
-
-                    <field name="alcohol_per" type="row" />
-
+                <field name="alcohol_per" type="row" />
             </xpath>
+        </pivot>
         </field>
     </record>
 </odoo>
