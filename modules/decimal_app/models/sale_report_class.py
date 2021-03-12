@@ -52,7 +52,7 @@ class Sale_Report_Class(models.Model):
             CASE WHEN l.product_id IS NOT NULL THEN sum(p.volume * l.product_uom_qty / u.factor * u2.factor) ELSE 0 END as volume,
             l.discount as discount,
             CASE WHEN l.product_id IS NOT NULL THEN sum((l.price_unit * l.product_uom_qty * l.discount / 100.0 / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END))ELSE 0 END as discount_amount,
-            t.x_studio_alcohol__1 as alcohol_per,
+            p.x_studio_alcohol__1 as alcohol_per,
             s.id as order_id
         """
 
@@ -76,7 +76,7 @@ class Sale_Report_Class(models.Model):
             l.order_id,
             t.uom_id,
             t.categ_id,
-            t.x_studio_alcohol__1,
+            p.x_studio_alcohol__1,
             s.name,
             s.date_order,
             s.partner_id,
