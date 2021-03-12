@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 class CustomField(models.Model):
     _inherit= 'sale.order'
-    custom_payment_method = fields.Char(string='Payment Method',store = False)
+    custom_payment_method = fields.Char(string='Payment Method')
 
 
 class SaleReport(models.Model):
@@ -73,7 +73,7 @@ class SaleReport(models.Model):
             t.uom_id,
             t.categ_id,
             s.name,
-            s.custom_payment_method
+            s.custom_payment_method,
             s.date_order,
             s.partner_id,
             s.user_id,
