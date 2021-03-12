@@ -1,6 +1,6 @@
 {
     'name' : 'CustomSO',
-    'version': '2.2',
+    'version': '2.3',
     'Summary': 'Custom SP',
     'description': 'Custom',
     'license': 'LGPL-3',
