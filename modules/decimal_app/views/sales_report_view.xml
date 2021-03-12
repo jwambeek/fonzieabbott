@@ -9,18 +9,18 @@
                 </pivot>
     </record>-->
 
-    <record id= "custom_sales_report" model= "ir.ui.view">
+    <!--<record id= "custom_sales_report" model= "ir.ui.view">
         <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
         <field name="model">sale.report</field >
         <field name="arch" type= "xml">
             <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="after">
                 <field name="alcohol_per" type="row"/>
-                <!--<field name="liters_per_unit" type="row"/>
+                <field name="liters_per_unit" type="row"/>
                 <field name="no_of_units_sold" type="row"/>
                 <field name="total_liters_sold" type="row"/>
-                <field name="total_liters_alcohol" type="row"/>-->
+                <field name="total_liters_alcohol" type="row"/>
             </xpath>
         </field>
-    </record>
+    </record>-->
 </odoo>
 
