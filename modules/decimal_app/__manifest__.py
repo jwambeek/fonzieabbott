@@ -1,6 +1,6 @@
 {
     'name' : 'Decimal',
-    'version': '4.1',
+    'version': '4.2',
     'Summary': 'Change decimal places',
     'description': 'To print the new report',
     'license': 'LGPL-3',
@@ -13,9 +13,10 @@
         'sale_management',
         'product',
     ],    
-    # 'data': [
-    #     'views/mrp_view.xml',
-    # ],
+     'data': [
+        #'views/mrp_view.xml',
+        'views/sale_report_view.xml'
+     ],
     'installable': True,
     'application':True,
     'auto_install':True

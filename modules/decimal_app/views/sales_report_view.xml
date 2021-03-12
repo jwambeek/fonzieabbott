@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="report_all_channels_sales_action" model="ir.actions.act_window">
+    <!--<record id="report_all_channels_sales_action" model="ir.actions.act_window">
         <field name="name">Sales Analysis</field>
         <field name="res_model">sale.report</field>
         <field name="view_mode">pivot</field>
          <pivot>
                     <field name="alcohol_text"  />
                 </pivot>
+    </record>-->
+
+    <record id= "custom_sales_report" model= "ir.ui.view">
+        <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
+        <field name="model">sale.report</field >
+        <field name="arch" type= "xml">
+            <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="after">
+                <field name="alcohol_per"/>
+                <field name="liters_per_unit"/>
+                <field name="no_of_units_sold"/>
+                <field name="total_liters_sold"/>
+                <field name="total_liters_alcohol"/>
+            </xpath>
+        </field>
     </record>
 </odoo>
 
