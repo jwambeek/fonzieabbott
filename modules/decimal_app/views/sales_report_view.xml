@@ -10,13 +10,13 @@
     </record>-->
 
     <record id= "custom_product_template" model= "ir.ui.view">
-        <field name="inherit_id" ref="sale.product_template_form"/>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="model">product.template</field >
         <field name="arch" type= "xml">
                 <!--<field name="product_brand_id" position="after">
                     <field name="alcohol_perc"/>  
                 </field>-->
-                <xpath expr="//page[@name='General Information']/field[@name='product_brand_id']" position="after">
+                <xpath expr="//page[@string='General Information']//field[@name='product_brand_id']" position="after">
                     <field name="alcohol_perc"/>
                 </xpath>
         </field>
