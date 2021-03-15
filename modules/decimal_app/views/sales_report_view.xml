@@ -16,7 +16,10 @@
                 <!--<field name="product_brand_id" position="after">
                     <field name="alcohol_perc"/>  
                 </field>-->
-                <xpath expr="//page[@name='general_information']/field[@name='categ_id']" position="after">
+                <!--<xpath expr="//page[@name='general_information']/field[@name='categ_id']" position="after">
+                    <field name="alcohol_perc"/>
+                </xpath>-->
+                <xpath expr="//page[@name='General Information']/group/field[@name='categ_id']" position="after">
                     <field name="alcohol_perc"/>
                 </xpath>
         </field>
