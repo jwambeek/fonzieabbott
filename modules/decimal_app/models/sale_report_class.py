@@ -1,6 +1,10 @@
 from odoo import models, fields, api
 from odoo import tools
 
+class Sale_Product(models.Model):
+    _inherit = 'product.template'
+
+    alocohol_perc = fields.Float(string='Alcohol%%')
 class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
