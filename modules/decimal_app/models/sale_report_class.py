@@ -8,7 +8,7 @@ class Sale_Report_Class(models.Model):
     #liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
     #total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
     category_of_alcohol = fields.Char(string='Category of alcohol', readonly=True)
-    alcohol_per = fields.Char(string ='Alcohol%', readonly=True)
+    alcohol_perc = fields.Char(string ='Alcohol%', readonly=True)
     liters_per_unit = fields.Float(string ='Liters per unit', readonly=True)
     
 
@@ -51,7 +51,7 @@ class Sale_Report_Class(models.Model):
             CASE WHEN l.product_id IS NOT NULL THEN sum(p.volume * l.product_uom_qty / u.factor * u2.factor) ELSE 0 END as volume,
             l.discount as discount,
             CASE WHEN l.product_id IS NOT NULL THEN sum((l.price_unit * l.product_uom_qty * l.discount / 100.0 / CASE COALESCE(s.currency_rate, 0) WHEN 0 THEN 1.0 ELSE s.currency_rate END))ELSE 0 END as discount_amount,
-            t.x_studio_selection_field_d07J9 as alcohol_per,
+            t.x_studio_selection_field_d07J9 as alcohol_perc,
             t.x_studio_liters_per_unit_eg_03_for_300ml as liters_per_unit,
             t.x_studio_category_of_alcohol as category_of_alcohol,
             s.id as order_id
