@@ -36,7 +36,7 @@
             </xpath>-->
             <pivot string="Sales Analysis">
                     <field name="date" position="after">
-                    <field name="alcohol_perc"/>  
+                    <field name="alcohol_perc" type="row"/>  
                 </field>
        </pivot>
         <!--<pivot>
