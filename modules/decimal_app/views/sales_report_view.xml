@@ -13,9 +13,12 @@
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="model">product.template</field >
         <field name="arch" type= "xml">
-                <field name="product_brand_id" position="after">
+                <!--<field name="product_brand_id" position="after">
                     <field name="alcohol_perc"/>  
-                </field>
+                </field>-->
+                <xpath expr="//page[@name='General Information']/field['product_brand_id']" position="after">
+                    <field name="alcohol_perc"/>
+                </xpath>
         </field>
 
     </record>
