@@ -26,7 +26,7 @@
         <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
         <field name="model">sale.report</field >
         <field name="arch" type= "xml">
-           <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="before">
+           <xpath expr="//pivot[@string='Sales Analysis']/field[@name='categ_id']" position="after">
                 <field name="alcohol_perc"/>
                 <!--<field name="alcohol_per" type="row"/>
                 <field name="liters_per_unit" type="row"/>
