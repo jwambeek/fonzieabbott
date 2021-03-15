@@ -9,6 +9,17 @@
                 </pivot>
     </record>-->
 
+    <record id= "custom_product_template" model= "ir.ui.view">
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="model">product.template</field >
+        <field name="arch" type= "xml">
+            <xpath expr="//field[@ name='product_brand_id']" position="after">
+                <field name="alcohol_perc" />
+            </xpath>
+
+    </record>
+
+
     <record id= "custom_sales_report" model= "ir.ui.view">
         <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
         <field name="model">sale.report</field >
