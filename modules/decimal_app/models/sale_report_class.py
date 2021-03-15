@@ -13,7 +13,7 @@ class Sale_Report_Class(models.Model):
 
     #liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
     #total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
-    alcohol_perc = fields.Float(string ='Alcohol', readonly=True)
+    alcohol_perc = fields.Float(string ='Test', readonly=True)
     default_code = fields.Char(string='Internal Reference', readonly=True)
 
     alcohol_per = fields.Float(string ='Alcohol%', readonly=True)
