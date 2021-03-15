@@ -65,6 +65,7 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold as no_of_units_sold,
             t.x_studio_total_liters_sold as total_liters_sold,
             t.x_studio_total_liters_of_alcohol as total_liters_alcohol,
+            t.alcohol_perc as alcohol_perc,
             s.id as order_id
         """
 
