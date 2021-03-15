@@ -1,20 +1,12 @@
 from odoo import models, fields, api
 from odoo import tools
 
-class Sale_Product(models.Model):
-    _inherit = 'product.template'
-
-    alcohol_perc = fields.Float(string='Alcohol%%')
-
-
 
 class Sale_Report_Class(models.Model):
     _inherit = 'sale.report'
 
     #liters_sold = fields.Float(string ='Liters per Unit', readonly=True)
     #total_liters_sold = fields.Float(string ='Total Liters Sold', readonly=True)
-    alcohol_perc = fields.Float(string ='Test1', readonly=True)
-    default_code = fields.Char(string='Internal Reference', readonly=True)
 
     alcohol_per = fields.Float(string ='Alcohol%', readonly=True)
     liters_per_unit = fields.Float(string ='Liters per unit', readonly=True)
@@ -66,8 +58,6 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold as no_of_units_sold,
             t.x_studio_total_liters_sold as total_liters_sold,
             t.x_studio_total_liters_of_alcohol as total_liters_alcohol,
-            t.alcohol_perc as alcohol_perc,
-            t.default_code as default_code,
             s.id as order_id
         """
 
@@ -96,8 +86,6 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold,
             t.x_studio_total_liters_sold,
             t.x_studio_total_liters_of_alcohol,
-            t.alcohol_perc,
-            t.default_code,
             s.name,
             s.date_order,
             s.partner_id,

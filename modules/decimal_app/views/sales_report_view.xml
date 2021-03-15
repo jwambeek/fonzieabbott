@@ -13,9 +13,6 @@
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="model">product.template</field >
         <field name="arch" type= "xml">
-                <!--<field name="product_brand_id" position="after">
-                    <field name="alcohol_perc"/>  
-                </field>-->
                 <xpath expr="//page[@name='general_information']//field[@name='categ_id']" position="after">
                     <field name="alcohol_perc"/>
                 </xpath>
@@ -26,20 +23,19 @@
         <field name="inherit_id" ref="sale_enterprise.sale_report_view_pivot"/>
         <field name="model">sale.report</field>
         <field name="arch" type= "xml">
-           <!--<xpath expr="//pivot[@name='Sales Analysis']//field[@name='date']" position="after">
-                <field name="alcohol_perc" type="row"/>
+           <xpath expr="//pivot[@name='Sales Analysis']//field[@name='date']" position="after">
                 <field name="alcohol_per" type="row"/>
                 <field name="liters_per_unit" type="row"/>
                 <field name="no_of_units_sold" type="row"/>
                 <field name="total_liters_sold" type="row"/>
                 <field name="total_liters_alcohol" type="row"/>
-            </xpath>-->
-            <pivot string="Sales Analysis" disable_linking="True" display_quantity="true" sample="1">
+            </xpath>
+            <!--<pivot string="Sales Analysis" disable_linking="True" display_quantity="true" sample="1">
                 <field name="product_id" position="after">
                     <field name="alcohol_perc" type="row"/> 
-                    <field name="default_code" type="row"/> 
+ 
                 </field>
-            </pivot>
+            </pivot>-->
         </field>
     </record>
 
