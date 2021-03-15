@@ -16,6 +16,7 @@
             <xpath expr="//field[@ name='product_brand_id']" position="after">
                 <field name="alcohol_perc" />
             </xpath>
+        </field>
 
     </record>
 
