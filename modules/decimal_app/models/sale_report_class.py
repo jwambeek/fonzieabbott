@@ -89,7 +89,7 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold,
             t.x_studio_total_liters_sold,
             t.x_studio_total_liters_of_alcohol,
-            t.category_of_alcohol,
+            t.x_studio_category_of_alcohol,
             s.name,
             s.date_order,
             s.partner_id,
