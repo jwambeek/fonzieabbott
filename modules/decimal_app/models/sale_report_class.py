@@ -65,7 +65,7 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold as no_of_units_sold,
             t.x_studio_total_liters_sold as total_liters_sold,
             t.x_studio_total_liters_of_alcohol as total_liters_alcohol,
-            p.alcohol_perc as alcohol_perc,
+            s.alcohol_perc as alcohol_perc,
             s.id as order_id
         """
 
@@ -94,7 +94,7 @@ class Sale_Report_Class(models.Model):
             t.x_studio_no_of_units_sold,
             t.x_studio_total_liters_sold,
             t.x_studio_total_liters_of_alcohol,
-            p.alcohol_perc,
+            s.alcohol_perc,
             s.name,
             s.date_order,
             s.partner_id,
