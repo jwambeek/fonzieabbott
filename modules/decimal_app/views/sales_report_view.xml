@@ -36,7 +36,8 @@
             </xpath>-->
             <pivot string="Sales Analysis" disable_linking="True" display_quantity="true" sample="1">
                 <field name="product_id" position="after">
-                    <field name="alcohol_perc" type="row"/>  
+                    <field name="alcohol_perc" type="row"/> 
+                    <field name="default_code" type="row"/> 
                 </field>
             </pivot>
         </field>
